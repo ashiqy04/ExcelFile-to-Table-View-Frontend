@@ -1,2 +1,3 @@
 # ExcelFile-to-Table-View
-upload excel file and view the datas of excel in table format
+Upload the Excel file and view the data of Excel in table format- FullStack Web Development
+Tech Stacks - Reactjs, Java, Springboot, MySql
