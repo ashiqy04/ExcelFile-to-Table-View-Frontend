@@ -4,7 +4,6 @@ import { Button } from '@mui/material';
 import {useNavigate } from 'react-router-dom';
 
 
-
 export default function Upload() {
 
     const navigate = useNavigate();

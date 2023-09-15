@@ -9,6 +9,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import CircularWithValueLabel from './progress';
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -35,12 +37,14 @@ export default function Download() {
     const [data, setData]=useState([])
 
     const [loading, setLoading] = useState(true);
-
+   
+  
     const loadUser = async () => {
       try {
         const result = await axios.get('http://localhost:8080/api/download');
         setData(result.data);
         setLoading(false);
+        
       } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false);
@@ -52,7 +56,7 @@ export default function Download() {
     }, []);
   
     if (loading) {
-      return <p>Loading...</p>;
+      return <CircularWithValueLabel/>;
     }
   
 console.log("data is showing", data)
